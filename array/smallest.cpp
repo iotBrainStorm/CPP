@@ -23,6 +23,10 @@ int main() {
     };
   }
 
+  // for (int i = 0; i < size; i++) {
+  //   smallest = min(marks[i], smallest);
+  // }
+
   cout << smallest << endl;
 
   return 0;
