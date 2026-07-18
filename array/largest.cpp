@@ -3,8 +3,9 @@ using namespace std;
 
 int main() {
   int size = 5;
-  int largest = 0;
+  int largest = INT32_MIN;
   int marks[size];
+  int position;
 
   cout << "please enter 5 numbers to find out largest one" << endl;
 
@@ -13,21 +14,18 @@ int main() {
     cin >> marks[i];
   }
 
-  cout << "the largest number is: ";
-
-  for (int i = 0; i < size - 1; i++) {
-    if (marks[i + 1] > marks[i]) {
-      largest = marks[i + 1];
-    } else {
+  for (int i = 0; i < size; i++) {
+    if (marks[i] > largest) {
       largest = marks[i];
-    };
+      position = i;
+    }
   }
 
   // for (int i = 0; i < size; i++) {
   //   largest = max(marks[i], largest);
   // }
 
-  cout << largest << endl;
-
+  cout << "the largest number at " << position << " position is: " << largest
+       << endl;
   return 0;
 }

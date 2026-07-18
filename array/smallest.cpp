@@ -3,8 +3,9 @@ using namespace std;
 
 int main() {
   int size = 5;
-  int smallest = 0;
+  int smallest = INT32_MAX;  // positive infinite number
   int marks[size];
+  int position;
 
   cout << "please enter 5 numbers to find out smallest one" << endl;
 
@@ -13,21 +14,19 @@ int main() {
     cin >> marks[i];
   }
 
-  cout << "the smallest number is: ";
-
-  for (int i = 0; i < size - 1; i++) {
-    if (marks[i + 1] < marks[i]) {
-      smallest = marks[i + 1];
-    } else {
+  for (int i = 0; i < size; i++) {
+    if (marks[i] < smallest) {
       smallest = marks[i];
-    };
+      position = i;
+    }
   }
 
   // for (int i = 0; i < size; i++) {
   //   smallest = min(marks[i], smallest);
   // }
 
-  cout << smallest << endl;
+  cout << "the smallest number at " << position << " position is: " << smallest
+       << endl;
 
   return 0;
 }
