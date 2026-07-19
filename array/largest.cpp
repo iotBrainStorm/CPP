@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
   int size = 5;
-  int largest = INT32_MIN;
+  int largest = INT32_MIN;  // negative infinite
   int marks[size];
   int position;
 
