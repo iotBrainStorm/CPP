@@ -4,8 +4,6 @@ using namespace std;
 int main() {
   int size = 5;
   int numbers[size];
-  int targetIndex[size];
-  int indexCount = -1;
   int target;
   bool isFound = false;
 
