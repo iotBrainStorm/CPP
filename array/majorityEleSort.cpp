@@ -1,17 +1,23 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 using namespace std;
 
 int findMajority(int arr[], int size) {
-  for (int i = 0; i < size; i++) {
-    int freq = 1;  // atleast one time exist, this is important
-    for (int j = i + 1; j < size; j++) {
-      if (arr[i] == arr[j]) {
-        freq++;
-      }
+  sort(arr, arr + size);  // inbuild ascending order sorting function
+  int freq = 1;           // atleast one time exist, this is important
+  int ans = arr[0];       // assume that ans is first element
+
+  for (int i = 1; i < size; i++) {
+    if (arr[i] == arr[i - 1]) {
+      freq++;
+    } else {
+      freq = 1;
+      ans = arr[i];
     }
+
     if (freq > (size / 2)) {
-      return arr[i];
+      return ans;
     }
   }
   return -1;  // it means no majority element is found
