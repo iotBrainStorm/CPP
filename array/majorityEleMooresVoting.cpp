@@ -3,11 +3,11 @@
 using namespace std;
 
 int findMajority(int arr[], int size) {
-  int freq = 0;
+  int freq = 1;
   int ans = 0;
 
   for (int i = 0; i < size; i++) {
-    if (freq == 0) {
+    if (freq == 1) {
       ans = arr[i];
     }
     if (ans == arr[i]) {
@@ -16,7 +16,18 @@ int findMajority(int arr[], int size) {
       freq--;
     }
   }
-  return ans;  // it means no majority element is found
+
+  // optional for no majority element
+  for (int i = 0; i < size; i++) {
+    if (ans == arr[i]) {
+      freq++;
+    }
+    if (freq > (size / 2)) {
+      return ans;
+    } else {
+      return -1;
+    }
+  }
 }
 
 int main() {
