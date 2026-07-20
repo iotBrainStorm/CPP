@@ -5,8 +5,7 @@ int main() {
   int size = 5;
   int arr[size];
   int maxSum = INT32_MIN;
-  int bestStart = 0;  // start point of max sum array
-  int bestEnd = 0;    // end point of max sum array
+  int currSum = 0;
 
   cout << "please enter 5 numbers to find out all possible sub-arrays" << endl;
   for (int i = 0; i < size; i++) {
@@ -41,27 +40,18 @@ int main() {
   }
   cout << endl;
 
-  cout << "maximum sum is: ";
-  for (int start = 0; start < size; start++) {
-    int currSum = 0;
-    for (int end = start; end < size; end++) {
-      currSum += arr[end];
+  cout << "maximum sum by Kadane's Algorithm is: ";
+  for (int index = 0; index < size; index++) {
+    currSum += arr[index];
 
-      if (currSum > maxSum) {
-        maxSum = currSum;   // store max sum
-        bestStart = start;  // store max sum start point
-        bestEnd = end;      // store max sum end point
-      }
+    if (currSum > maxSum) {
+      maxSum = currSum;  // store max sum
+    }
+    if (currSum < 0) {
+      currSum = 0;
     }
   }
   cout << maxSum << endl;
-
-  cout << "Sub-array: [ ";
-  for (int i = bestStart; i <= bestEnd; i++) {
-    cout << arr[i];
-    if (i != bestEnd) cout << ", ";
-  }
-  cout << " ]";
 
   return 0;
 }
