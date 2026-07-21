@@ -1,6 +1,5 @@
-#include <algorithm>
+#include <algorithm>  // must include this library for sort
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int findMajority(int arr[], int size) {
