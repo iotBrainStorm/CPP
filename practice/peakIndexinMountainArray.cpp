@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-int binarySearchPeakValue(vector<float>& vec, float target) {
+int binarySearchPeakValue(vector<float>& vec) {
   int st = 0;
   int end = vec.size() - 1;
   while (st <= end) {
@@ -43,9 +43,9 @@ int main() {
     cout << val << " ";
   }
   cout << endl;
-
-  cout << "peak found at index: " << binarySearchPeakValue(numbers, target)
-       << endl;
+  int peakIndex = binarySearchPeakValue(numbers);
+  cout << "peak found at index: " << binarySearchPeakValue(numbers) << endl;
+  cout << "peak value is: " << numbers[peakIndex] << endl;
 
   return 0;
 }
