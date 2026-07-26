@@ -52,7 +52,8 @@ int main() {
           "duplicate array (size always be odd): ";
   cin >> vectorSize;
 
-  cout << "please enter the numbers one by one in sorted form" << endl;
+  cout << "please enter the numbers one by one in duplicate form except one"
+       << endl;
 
   numbers.clear();
   for (int i = 0; i < vectorSize; i++) {
