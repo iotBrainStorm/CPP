@@ -23,6 +23,7 @@ bool isValid(vector<int>& arr, int maxStudents, int maxPages) {
   } else {
     return true;
   }
+  // return students > maxStudents ? false : true;
 }
 
 int allocatedBooks(vector<int>& arr, int stu) {
