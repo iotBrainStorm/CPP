@@ -28,9 +28,9 @@ int getMaxPossibleDistance(vector<int>& arr, int cows) {
 
     if (isPossible(arr, cows, mid)) {  // valid case
       ans = mid;
-      st = mid + 1;   // left shift
+      st = mid + 1;   // right shift
     } else {          // invalid case
-      end = mid - 1;  // right shift
+      end = mid - 1;  // left shift
     }
   }
   return ans;
