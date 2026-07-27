@@ -6,9 +6,14 @@ using namespace std;
 void bubbleSort(vector<float>& arr) {
   int length = arr.size();
   for (int i = 0; i < length - 1; i++) {
+    bool isSwap = false;
     for (int j = 0; j < length - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         swap(arr[j], arr[j + 1]);
+        isSwap = true;
+      }
+      if (!isSwap) {
+        return;
       }
     }
   }
