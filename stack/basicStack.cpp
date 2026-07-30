@@ -27,5 +27,14 @@ int main() {
   }
   cout << endl;
 
+  // swap the stack
+  s.push(1);
+  s.push(5);
+  s.push(4);
+  stack<int> s2;
+  s2.swap(s);
+  cout << "s size: " << s.size() << endl;
+  cout << "s2 size: " << s2.size() << endl;
+
   return 0;
 }
