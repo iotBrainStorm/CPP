@@ -32,11 +32,22 @@ int main() {
 
   // emplace back (alternative of push back)
   vec.emplace_back(6);
-  cout << "all values in vec: ";
+  cout << "all values in vec after emplace back: ";
   for (int val : vec) {
     cout << val << " ";
   }
   cout << endl;
+
+  // pop back (delete from back)
+  vec.pop_back();
+  cout << "all values in vec after pop back: ";
+  for (int val : vec) {
+    cout << val << " ";
+  }
+  cout << endl;
+
+  // print any index value
+  cout << "value at index 2 is: " << vec[2] << " or " << vec.at(2) << endl;
 
   return 0;
 }
