@@ -23,5 +23,12 @@ int main() {
   cout << "size of vec after push 5: " << vec.size() << endl;
   cout << "cap of vec after push 5: " << vec.capacity() << endl;
 
+  // print all value
+  cout << "all values in vec: ";
+  for (int val : vec) {
+    cout << val << " ";
+  }
+  cout << endl;
+
   return 0;
 }
