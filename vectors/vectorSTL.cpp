@@ -74,5 +74,17 @@ int main() {
   }
   cout << endl;
 
+  // insert function in vector
+  vec.insert(vec.begin(), 5);      // insert 5 at index 0
+  vec.insert(vec.begin() + 1, 6);  // insert 6 at index 1
+  vec.insert(vec.begin() + 2, 7);  // insert 7 at index 2
+  vec.insert(vec.begin() + 3, 8);  // insert 8 at index 3
+  /* if index is not exist then insert function will not be worked */
+  cout << "all values in vec after insert: ";
+  for (int val : vec) {
+    cout << val << " ";
+  }
+  cout << endl;
+
   return 0;
 }
