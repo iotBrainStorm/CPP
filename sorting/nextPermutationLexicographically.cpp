@@ -7,14 +7,14 @@ using namespace std;
 target is basically to find out next larger number
 
 step1: find the pivot number which is A[i] < A[i + 1] from the last
-step2: find the right most element which is greater than pivot
+step2: find the right most element which is just greater than pivot
 step3: swap(right most element, pivot)
 step4: reverse the all elements from (pivot+1) to (n-1) for decreasing to
 increasing order
 
 ex: find the next larger number of 12543 ?
 step1: pivot = 2
-step2: right most element = 3
+step2: right most element which is just greater than pivot = 3
 step3: after swap RME and pivot = 13542
 step4; reverse the number between (pivot+1) to (n-1) = 13245
 
@@ -50,6 +50,7 @@ void nextLargerNumber(vector<int>& arr) {
     swap(arr[i], arr[j]);
     i++;
     j--;
+    // swap(arr[i++], arr[j--]);
   }
 }
 
