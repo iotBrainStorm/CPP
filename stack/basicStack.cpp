@@ -20,5 +20,12 @@ int main() {
   s.pop();
   cout << "top value after pop: " << s.top() << endl;  // 7
 
+  // print all elements in reverse order from stack
+  while (!s.empty()) {
+    cout << s.top() << " ";
+    s.pop();
+  }
+  cout << endl;
+
   return 0;
 }
