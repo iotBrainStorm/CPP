@@ -88,7 +88,6 @@ int main() {
 
   // clear function in vector
   vec.clear();
-  /* if index is not exist then insert function will not be worked */
   cout << "all values in vec after clear all element: ";
   for (int val : vec) {
     cout << val << " ";
@@ -96,6 +95,10 @@ int main() {
   cout << endl;
   /* clear function only delete its all elements but not its actual capacity */
   cout << "capacity of vec after clear all element: " << vec.capacity() << endl;
+
+  // empty function in vector
+  vec.clear();
+  cout << "is empty: " << vec.empty() << endl;
 
   return 0;
 }
