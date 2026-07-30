@@ -29,5 +29,14 @@ int main() {
   }
   cout << endl;
 
+  // erase from front and back
+  ls.pop_front();
+  ls.pop_back();
+  cout << "all elements in list after erase: ";
+  for (int val : ls) {
+    cout << val << " ";
+  }
+  cout << endl;
+
   return 0;
 }
