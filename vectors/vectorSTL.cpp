@@ -53,5 +53,26 @@ int main() {
   cout << "value at front is: " << vec.front() << endl;
   cout << "value at back is: " << vec.back() << endl;
 
+  // erase function in vector
+  vec.erase(vec.begin());  // erase first element
+  cout << "all values in vec after erase first element: ";
+  for (int val : vec) {
+    cout << val << " ";
+  }
+  cout << endl;
+  vec.erase(vec.begin() + 2);  // erase third element
+  cout << "all values in vec after erase third element: ";
+  for (int val : vec) {
+    cout << val << " ";
+  }
+  cout << endl;
+  vec.erase(vec.begin() + 1,
+            vec.begin() + 3);  // erase from second to third element
+  cout << "all values in vec after erase 2nd to 3rd element: ";
+  for (int val : vec) {
+    cout << val << " ";
+  }
+  cout << endl;
+
   return 0;
 }
