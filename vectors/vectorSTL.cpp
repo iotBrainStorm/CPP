@@ -30,5 +30,13 @@ int main() {
   }
   cout << endl;
 
+  // emplace back (alternative of push back)
+  vec.emplace_back(6);
+  cout << "all values in vec: ";
+  for (int val : vec) {
+    cout << val << " ";
+  }
+  cout << endl;
+
   return 0;
 }
