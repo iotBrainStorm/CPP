@@ -17,5 +17,17 @@ int main() {
   }
   cout << endl;
 
+  // push from front
+  ls.push_front(8);
+  ls.push_front(7);
+  ls.push_front(6);
+  ls.push_front(5);
+  ls.push_front(4);
+  cout << "all elements in list: ";
+  for (int val : ls) {
+    cout << val << " ";
+  }
+  cout << endl;
+
   return 0;
 }
