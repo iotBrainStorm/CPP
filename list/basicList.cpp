@@ -4,6 +4,7 @@
 using namespace std;
 
 int main() {
+  /* list can operated from back and front also, but vector can't do */
   list<int> ls;
 
   // push from back
