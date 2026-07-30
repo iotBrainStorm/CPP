@@ -49,5 +49,9 @@ int main() {
   // print any index value
   cout << "value at index 2 is: " << vec[2] << " or " << vec.at(2) << endl;
 
+  // print front and back value
+  cout << "value at front is: " << vec.front() << endl;
+  cout << "value at back is: " << vec.back() << endl;
+
   return 0;
 }
