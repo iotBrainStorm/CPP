@@ -10,13 +10,21 @@ int main() {
 
   // print ending point
   cout << "ending element is: " << *(vec.end()) << endl;
-  /* it gives garbage value because it does not point the exactly end point*/
+  /* it gives garbage value because it does not point the exactly end point */
 
   // create iterator (vector loop)
   cout << "all elements in vector are: ";
   vector<int>::iterator i;
   for (i = vec.begin(); i != vec.end(); i++) {
     cout << *(i) << " ";
+  }
+  cout << endl;
+
+  // create reverse iterator (reverse vector loop)
+  cout << "all reverse elements in vector are: ";
+  vector<int>::reverse_iterator it;
+  for (it = vec.rbegin(); it != vec.rend(); it++) {
+    cout << *(it) << " ";
   }
   cout << endl;
 
