@@ -28,5 +28,17 @@ int main() {
   }
   cout << endl;
 
+  // create reverse iterator (forward/reverse vector loop)
+  cout << "all forward elements in vector are: ";
+  for (auto i = vec.begin(); i != vec.end(); i++) {
+    cout << *(i) << " ";
+  }
+  cout << endl;
+  cout << "all reverse elements in vector are: ";
+  for (auto i = vec.rbegin(); i != vec.rend(); i++) {
+    cout << *(i) << " ";
+  }
+  cout << endl;
+
   return 0;
 }
