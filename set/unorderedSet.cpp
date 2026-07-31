@@ -6,7 +6,7 @@ int main() {
   /*
    * it stores all unique values, not in duplicate
    * it stores the data in un-sorted order
-   * most of case it is used, because it is fast
+   * most of case it is used, because it is fast compare to others set
    */
 
   unordered_set<int> s;
