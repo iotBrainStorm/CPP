@@ -38,5 +38,12 @@ int main() {
     cout << p.first << ": " << p.second << endl;
   }
 
+  // search any key
+  if (m.find("cameras") != m.end()) {
+    cout << "camera found" << endl;
+  } else {
+    cout << "camera not found" << endl;
+  }
+
   return 0;
 }
