@@ -29,5 +29,14 @@ int main() {
     cout << p.first << ": " << p.second << endl;
   }
 
+  // count the key
+  cout << "tablet: " << m.count("tablets") << endl;
+
+  // erase the key
+  m.erase("cpu");
+  for (auto p : m) {
+    cout << p.first << ": " << p.second << endl;
+  }
+
   return 0;
 }
