@@ -6,6 +6,7 @@ int main() {
   /*
    * it stores and prints the data randomly
    * it can't store duplicate key
+   * in maximum cases unordered map is used, it is fast
    */
 
   unordered_map<string, int> m;
