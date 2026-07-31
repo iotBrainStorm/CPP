@@ -19,5 +19,12 @@ int main() {
     cout << p.first << ": " << p.second << endl;
   }
 
+  // delete any duplicate key
+  m.erase(m.find("laptops"));
+  cout << "after delete only one laptop" << endl;
+  for (auto p : m) {
+    cout << p.first << ": " << p.second << endl;
+  }
+
   return 0;
 }
