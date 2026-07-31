@@ -6,6 +6,8 @@ int main() {
   /*
    * it stores all unique value, not in duplicate
    * it stores the data in sorted order
+   * if we lower bound function it will the exactly same value if it exist
+   * otherwise it will be return just immediate greater value
    */
 
   set<int> s;
@@ -26,5 +28,9 @@ int main() {
     cout << val << " " << endl;
   }
 
+  // lower bound
+  cout << "lower bound (5): " << *(s.lower_bound(5)) << endl;    // 5
+  cout << "lower bound (7): " << *(s.lower_bound(7)) << endl;    // 9
+  cout << "lower bound (12): " << *(s.lower_bound(12)) << endl;  // garbage
   return 0;
 }
