@@ -23,5 +23,22 @@ int main() {
   }
   cout << endl;
 
+  // print in reverse order
+  priority_queue<int, vector<int>, greater<int>> rq;
+
+  rq.push(1);
+  rq.push(5);
+  rq.push(4);
+  rq.push(3);
+  rq.push(8);
+  rq.push(7);
+  rq.push(-4);
+  // print all elements from priority-queue in reverse order
+  while (!rq.empty()) {
+    cout << rq.top() << " ";
+    rq.pop();
+  }
+  cout << endl;
+
   return 0;
 }
