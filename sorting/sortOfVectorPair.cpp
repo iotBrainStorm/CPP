@@ -18,5 +18,12 @@ int main() {
     cout << p.first << " " << p.second << endl;
   }
 
+  // descending order sort on the basis first element of pair
+  sort(vec.begin(), vec.end(), greater<pair<int, int>>());
+  cout << "descending order sort on the basis first element of pair:\n";
+  for (auto p : vec) {
+    cout << p.first << " " << p.second << endl;
+  }
+
   return 0;
 }
