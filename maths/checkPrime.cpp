@@ -4,7 +4,6 @@
 
 #include <algorithm>
 #include <iostream>
-#include <vector>
 using namespace std;
 
 string isPrime(int num) {
