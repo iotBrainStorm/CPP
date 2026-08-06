@@ -10,6 +10,9 @@ int reverseNumber(int n) {
   int reverse = 0;
   while (n != 0) {
     int dig = n % 10;
+    if (reverse > INT32_MAX / 10 || reverse < INT32_MIN / 10) { // out of range
+      return 0;
+    }
     reverse = reverse * 10 + dig;
     n = n / 10;
   }
