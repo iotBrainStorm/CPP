@@ -9,15 +9,30 @@
 #include <iostream>
 using namespace std;
 
+// int diagonalSum(int matrix[][4], int n) {
+//   int sum = 0;
+//   for (int i = 0; i < n; i++) {
+//     for (int j = 0; j < n; j++) {
+//       if (i == j) {
+//         sum += matrix[i][j]; // for primary diagonal => cells: (0, 0), (1, 1), (2, 2), (3, 3) ...
+//       } else if (j == n - 1 - i) {
+//         sum += matrix[i][j]; // for secondary diagonal => cells: (0, 3), (1, 2), (2, 1), (3, 0) ...
+//       }
+//     }
+//   }
+//   return sum;
+// }
+
 int diagonalSum(int matrix[][4], int n) {
   int sum = 0;
-  for (int i = 0; i < n; i++) {   // i => cols
-    for (int j = 0; j < n; j++) { // j => rows
-      if (i == j) {
-        sum += matrix[i][j]; // for primary diagonal => cells: (0, 0), (1, 1), (2, 2), (3, 3) ...
-      } else if (j == n - 1 - i) {
-        sum += matrix[i][j]; // for secondary diagonal => cells: (0, 3), (1, 2), (2, 1), (3, 0) ...
-      }
+
+  // pd => j = i
+  // sd => j = n - 1 - i
+
+  for (int i = 0; i < n; i++) {
+    sum += matrix[i][i];
+    if (i != n - i - 1) {
+      sum += matrix[i][n - i - 1];
     }
   }
   return sum;
