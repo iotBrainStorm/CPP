@@ -25,9 +25,7 @@ ex: 3749 => MMMDCCXLIX
 
  */
 
-#include <algorithm>
 #include <iostream>
-#include <vector>
 using namespace std;
 
 string intToRoman(int num) {
