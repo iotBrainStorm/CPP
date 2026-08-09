@@ -4,8 +4,7 @@ using namespace std;
 
 int main() {
   /*
-   * map stores the data with unique key and value, value can be duplicate but
-   * key can't
+   * map stores the data with unique key and value, value can be duplicate but key can't
    * it stores the data in alphabetical order lexicographically
    */
 

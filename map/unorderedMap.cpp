@@ -5,7 +5,7 @@ using namespace std;
 int main() {
   /*
    * it stores and prints the data randomly
-   * it can't store duplicate key
+   * it can't store duplicate key, key is always unique value
    * in maximum cases unordered map is used, it is fast
    */
 
