@@ -45,7 +45,7 @@ int main() {
   cin >> target;
 
   ans = twoSum(arr, target);
-  cout << "sum found at index: ";
+  cout << "two sum found at index: ";
   for (int idx : ans) {
     cout << idx << "(" << arr[idx] << ")" << "  ";
   }

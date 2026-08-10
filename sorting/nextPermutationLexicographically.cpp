@@ -9,8 +9,7 @@ target is basically to find out next larger number
 step1: find the pivot number which is A[i] < A[i + 1] from the last
 step2: find the right most element which is just greater than pivot
 step3: swap(right most element, pivot)
-step4: reverse the all elements from (pivot+1) to (n-1) for decreasing to
-increasing order
+step4: reverse the all elements from (pivot+1) to (n-1) for decreasing to increasing order
 
 ex: find the next larger number of 12543 ?
 step1: pivot = 2
@@ -20,7 +19,7 @@ step4; reverse the number between (pivot+1) to (n-1) = 13245
 
 */
 
-void nextLargerNumber(vector<int>& arr) {
+void nextLargerNumber(vector<int> &arr) {
   // step1: find the pivot
   int pivot = -1;
   int n = arr.size();
@@ -31,7 +30,7 @@ void nextLargerNumber(vector<int>& arr) {
     }
   }
 
-  if (pivot == -1) {  // optional
+  if (pivot == -1) { // optional
     reverse(arr.begin(), arr.end());
     return;
   }
@@ -39,7 +38,7 @@ void nextLargerNumber(vector<int>& arr) {
   // step2: find the right most element which is greater than pivot
   for (int i = n - 1; i > pivot; i--) {
     if (arr[i] > arr[pivot]) {
-      swap(arr[i], arr[pivot]);  // step3
+      swap(arr[i], arr[pivot]); // step3
       break;
     }
   }
