@@ -7,12 +7,10 @@
 using namespace std;
 
 void printNums(int num) {
-
   if (num == 1) {
     cout << "1" << endl;
     return;
   }
-
   cout << num << " ";
   num--;
   printNums(num);
@@ -20,7 +18,7 @@ void printNums(int num) {
 
 int main() {
   int range;
-  cout << "please entr your range to print: ";
+  cout << "please enter your range to print: ";
   cin >> range;
   printNums(range);
   return 0;
