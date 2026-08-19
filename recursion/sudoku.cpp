@@ -38,7 +38,6 @@ solution not possible!
 
  */
 
-#include <algorithm>
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -60,7 +59,7 @@ bool isSafe(vector<vector<char>> &board, int row, int col, char dig) {
 
   // check 3 X 3 grid
   int sr = (row / 3) * 3; // starting row
-  int sc = (col / 3) * 3; // staring col
+  int sc = (col / 3) * 3; // starting col
   for (int i = sr; i < sr + 3; i++) {
     for (int j = sc; j < sc + 3; j++) {
       if (board[i][j] == dig) {
